@@ -19,7 +19,7 @@ export default function Navigation() {
 
   return (
     <nav>
-      <ul className="navigation-links">
+      <ul className="navigation-links flex space-x-4">
         {links.map(({ label, path }) => (
           <li key={path}>
             <NavigationItem
