@@ -1,11 +1,17 @@
+import Header from '@/components/Header'
+import React from 'react'
+
 export default function JournalLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {children}
-    </main>
+    <>
+      <Header />
+      <main className="max-w-5xl mx-auto px-4 flex justify-between">
+        <div className="site-content">{children}</div>
+      </main>
+    </>
   )
 }

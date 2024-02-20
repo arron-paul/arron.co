@@ -1,5 +1,7 @@
 'use client'
+
 import Link from 'next/link'
+import React from 'react'
 
 interface NavigationItemProps {
   label: string
@@ -7,10 +9,12 @@ interface NavigationItemProps {
   active: boolean
 }
 
-export default function NavigationItem(item: NavigationItemProps) {
+const NavigationItem: React.FC<NavigationItemProps> = ({ label, url, active }) => {
   return (
-    <Link href={item.url} className={item.active ? 'active' : ''}>
-      {item.label}
+    <Link href={url} className={active ? 'active' : ''}>
+      {label}
     </Link>
   )
 }
+
+export default NavigationItem

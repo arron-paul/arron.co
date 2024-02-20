@@ -1,7 +1,12 @@
+'use client'
+
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
+import React from 'react'
 
-export default function Header() {
+interface HeaderProps {}
+
+const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="py-4">
       <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
@@ -28,3 +33,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header
