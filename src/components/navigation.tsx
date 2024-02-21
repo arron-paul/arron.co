@@ -14,9 +14,8 @@ const links = [
   },
 ]
 
-export default function Navigation() {
+const Navigation = () => {
   const currentPath = usePathname()
-
   return (
     <nav>
       <ul className="navigation-links flex space-x-4">
@@ -33,3 +32,5 @@ export default function Navigation() {
     </nav>
   )
 }
+
+export default Navigation

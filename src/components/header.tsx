@@ -4,9 +4,7 @@ import Navigation from '@/components/navigation'
 import Image from 'next/image'
 import React from 'react'
 
-interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = () => {
+const Header = () => {
   return (
     <header className="py-4">
       <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
