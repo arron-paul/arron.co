@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import NavigationItem from '@/components/NavigationItem'
+import NavigationItem from '@/components/navigation-item'
 
 const links = [
   {
