@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import { Header } from '@/components'
 import React from 'react'
 
 export default function JournalLayout({
