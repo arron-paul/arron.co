@@ -5,18 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview": "next build && next start",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "date-fns": "^3.3.1",
-    "gray-matter": "^4.0.3",
+    "contentlayer": "^0.3.2",
     "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "sass": "^1.71.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "next-contentlayer": "^0.3.2"
   },
   "devDependencies": {
     "@types/node": "^20",
