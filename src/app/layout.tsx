@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import './styles/globals.css'
 import { Inter } from 'next/font/google'
 import { cerebri } from './fonts'
@@ -24,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
             <header className="flex items-center justify-between">
-              <Image src="/wordmark-dark.svg" height="125" width="222" alt="Wordmark" />
+              <h1 className="mb-0 text-3xl font-extrabold leading-none tracking-tighter text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Arron Paul</h1>
               <div className="">
                 <nav className="ml-auto text-sm font-medium space-x-6">
                   <Link href="/">Home</Link>
