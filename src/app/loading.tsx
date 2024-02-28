@@ -3,8 +3,6 @@ import './styles/globals.css'
 import { Inter } from 'next/font/google'
 import { cerebri } from './fonts'
 import { ThemeProvider } from '../components/theme-provider'
-import { Suspense } from 'react'
-import LoadingLayout from './loading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,25 +15,15 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function LoadingLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${cerebri.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
-            <header className="flex items-center justify-between">
-              <h1 className="mb-0 text-3xl font-extrabold leading-none tracking-tighter text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Arron Paul</h1>
-              <div className="">
-                <nav className="ml-auto text-sm font-medium space-x-6">
-                  <Link href="/">Home</Link>
-                  <Link href="/about">About</Link>
-                </nav>
-              </div>
-            </header>
-            <Suspense fallback={<LoadingLayout />}>
-            <main>{children}</main>
-            </Suspense>
+            
+            <main>Loading</main>
           </div>
         </ThemeProvider>
       </body>
