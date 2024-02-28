@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import './styles/globals.css'
 import { Inter } from 'next/font/google'
+import { cerebri } from './fonts'
+import { ThemeProvider } from '../components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,17 +20,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}>
-        <div className="max-w-2xl mx-auto py-10 px-4">
-          <header>
-            <div className="flex items-center justify-between">
-              <nav className="ml-auto text-sm font-medium space-x-6">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-              </nav>
-            </div>
-          </header>
-          <main>{children}</main>
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="max-w-2xl mx-auto py-10 px-4">
+            <header className="flex items-center justify-between">
+              <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="30" fill="red" />
+              </svg>
+              <div className="">
+                <nav className="ml-auto text-sm font-medium space-x-6">
+                  <Link href="/">Home</Link>
+                  <Link href="/about">About</Link>
+                </nav>
+              </div>
+            </header>
+            <main>{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
