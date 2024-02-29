@@ -3,8 +3,6 @@ import './styles/globals.css'
 import { Inter } from 'next/font/google'
 import { cerebri } from './fonts'
 import { ThemeProvider } from '../components/theme-provider'
-import { Suspense } from 'react'
-import LoadingLayout from './loading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,9 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </nav>
               </div>
             </header>
-            <Suspense fallback={<LoadingLayout />}>
             <main>{children}</main>
-            </Suspense>
           </div>
         </ThemeProvider>
       </body>
