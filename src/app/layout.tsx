@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import FancyCursor from '@/src/components/fancy-cursor'
 import { ThemeProvider } from '@/src/components/theme-provider'
-import { cerebri } from '@src/app/fonts'
+import { cerebri } from '@/src/app/fonts'
 
 export const metadata = {
   title: 'Create Next App',
