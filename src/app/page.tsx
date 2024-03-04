@@ -1,5 +1,6 @@
-import { allPosts } from '@/.contentlayer/generated'
 import Link from 'next/link'
+
+import { allPosts } from '@/contentlayer'
 
 export default function Home() {
   return (

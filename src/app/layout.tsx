@@ -1,11 +1,10 @@
-import Link from 'next/link'
-import './styles/globals.css'
-import { Inter } from 'next/font/google'
-import { cerebri } from './fonts'
-import { ThemeProvider } from '../components/theme-provider'
-import FancyCursor from '../components/fancy-cursor'
+import '@/src/app/styles/globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link'
+
+import FancyCursor from '@/src/components/fancy-cursor'
+import { ThemeProvider } from '@/src/components/theme-provider'
+import { cerebri } from '@src/app/fonts'
 
 export const metadata = {
   title: 'Create Next App',
