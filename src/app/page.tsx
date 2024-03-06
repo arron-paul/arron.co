@@ -4,15 +4,15 @@ import { allPosts } from '@/contentlayer'
 
 export default function Home() {
   return (
-    <div className="prose dark:prose-invert">
+    <ul className="prose dark:prose-invert mt-10">
       {allPosts.map((post) => (
-        <article key={post._id}>
+        <li key={post._id} className="px-0">
           <Link href={post.slug}>
-            <h2>{post.title}</h2>
+            <h2 className="py-0 mt-0 my-2">{post.title}</h2>
           </Link>
-          {post.description && <p>{post.description}</p>}
-        </article>
+          <p className="py-0 mt-1">{post.description}</p>
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }
