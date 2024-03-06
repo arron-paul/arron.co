@@ -1,8 +1,16 @@
 import Image from 'next/image'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import { Code } from 'bright'
+
+Code.theme = {
+  dark: 'poimandres',
+  light: 'light-plus',
+  lightSelector: 'html.light',
+}
 
 const components = {
   Image,
+  pre: Code,
 }
 
 interface MdxProps {
